@@ -1,0 +1,87 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/images/perfil.jpg">
+        </ion-avatar>
+
+        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          {{p.title}}
+        </button>
+      </ion-item>
+
+      <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/images/facul.png">
+          </ion-avatar>
+  
+          <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+            {{p.subtitle}}
+          </button>
+        </ion-item>
+
+        <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/images/curso.png">
+            </ion-avatar>
+    
+            <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+              {{p.subtitle1}}
+            </button>
+          </ion-item>
+
+          <ion-item>
+              <ion-avatar item-start>
+                <img src="assets/images/prof.png">
+              </ion-avatar>
+      
+              <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                {{p.subtitle2}}
+              </button>
+            </ion-item>
+
+            <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/images/test.png">
+                </ion-avatar>
+        
+                <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                  {{p.subtitle3}}
+                </button>
+              </ion-item>
+
+              <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/images/agend.png">
+                  </ion-avatar>
+          
+                  <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                    {{p.subtitle4}}
+                  </button>
+                </ion-item>
+                
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/images/config.png">
+                  </ion-avatar>
+          
+                  <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                    {{p.subtitle5}}
+                  </button>
+                </ion-item>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
